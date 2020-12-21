@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>YOGA</title>
+	<!-- index.css and bootstrap(bootstrap.css, jquery.min.js and bootstrap.js ) -->
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="stylesheet" type="text/css" href="Bootstrap/dist/css/bootstrap.css">
+	<script src="Bootstrap/dist/js/jquery.min.js"></script>
+	<script src="Bootstrap/dist/js/bootstrap.js"></script>
+	
+	<!--  meta tag to provide tablet and mobile view-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+	
+	<!-- animate.css, aos.css and aos.js for navbar animation and animation on scroll -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	
+	<!-- fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+	
+	<!-- jquery to animate list inside navbar -->
+	<script>
+		$(document).ready(function () {
+			$('#navanim').click(function () {
+				$('#navbarcollapse').addClass("animated fadeIn slow");
+			})
+		})
+	</script>
+	
+	<!-- jquery for starting animation and pageload -->
+	<script>
+		$(document).ready(function () {
+			$(".loader").delay(4700).fadeOut(500);
+			$(".hello").delay(5000).fadeIn(500);
+		});
+	</script>
+		
+</head>
+
+<body>
+	<!-- starting animation -->
+	<div class="loader">
+		<div class="dot"></div>
+		<div class="dot"></div>
+		<div class="dot"></div>
+	</div>
+
+	<!-- webpage after animation gets close -->
+	<div class="hello">
+		<div class="top-nav">
+			<div class="top-nav-inner">
+				<div class="navbar navbar-inverse">
+					<div class="container-fluid">
+						<div class="navbar-header">
+							<a href="#" class="navbar-brand">Dhamma Yoga</a>
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+								data-target="#navbarcollapse" aria-expanded="false" id="navanim"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+			
+						<div class="collapse navbar-collapse" id="navbarcollapse">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#helloworld">ABOUT</a></li>
+								<li><a href="#glance">GLANCE</a></li>
+								<li><a href="#process">PROCESS</a></li>
+								<li><a href="#contact">CONTACT US</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<div class="slider">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+						<div class="caption">
+							<h2><span>Hatha Yoga</span><br>A place to balance yourself</h2>
+							<p>It teaches us to use the body as the bow, asana as the arrow, and the soul as the target. ...</p>
+							<div class="button-group">
+								<a href="#"><button class="btn btn-primary">Explore More</button></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 rtcarousel">
+						<div class="slider-in">
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner">
+									<div class="item active">
+										<img src="media/Cobra.jpg">
+									</div>
+									<div class="item">
+										<img src="media/Crow Pose.jpg">
+									</div>
+									<div class="item">
+										<img src="media/Downward facing dog.jpg">
+									</div>
+									<div class="item">
+										<img src="media/Plough Pose.jpg">
+									</div>
+									<div class="item">
+										<img src="media/Three legged dog.jpg">
+									</div>
+									<div class="item">
+										<img src="media/Warrior two.jpg">
+									</div>
+									<div class="item">
+										<img src="media/wheel.jpg">
+									</div>
+									<div class="item">
+										<img src="media/Side plank.jpg">
+									</div>
+								</div>
+					
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+									<span class="glyphicon glyphicon-chevron-left"></span>
+								</a>
+								<a class="right carousel-control" href="#myCarousel" data-slide="next">
+									<span class="glyphicon glyphicon-chevron-right"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+
+		<div class="container-fluid world">
+			<h1 id="helloworld">hello</h1>
+		</div>
+
+	</div>
+
+
+
+<!-- additional script to hide the navbar list on click of list item -->
+<script>
+	$('.navbar-collapse a').click(function () {
+		$(".navbar-collapse").collapse('hide');
+	});
+</script>
+
+<!-- additional script to provide fadein effect to navbar-->
+<script>
+	AOS.init({ duration: 1000 });
+</script>
+<script>
+	$(document).ready(function () {
+		$(window).scroll(function () {
+			var positiontop = $(document).scrollTop();
+			if ((positiontop >= 60)) {
+				$('.top-nav-inner').addClass('navbar-scroll animated fadeInDown medium');
+			}
+			else {
+				$('.top-nav-inner').removeClass('navbar-scroll animated fadeInDown medium');
+			}
+		})
+	})
+</script>
+</body>
+
+</html>
